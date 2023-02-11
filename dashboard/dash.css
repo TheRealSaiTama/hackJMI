@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.sidebar{
+    position: fixed;
+    height: 100%;
+    width: 240px;
+    background: #fbfbff;
+    transition: all 0.5s ease;
+  }
+  .sidebar.active{
+    width: 80px;
+  }
+  .sidebar .logo-details{
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar .logo-details .logo_name{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .sidebar .nav-links{
+    margin-top: 10px;
+  }
+  .sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    height: 50px;
+  }
+  .sidebar .nav-links li a{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: top;
+    text-decoration: none;
+    transition: font-size 0.4;
+ 
+  }
+  .sidear .nav-links li a.active{
+    background: #cecece;
+  }
+  .sidebar .nav-links li a:hover{
+    font-size: 32px;
+  }
+  .sidebar .nav-links li i{
+    min-width: 60px;
+    text-align: center;
+    font-size: 18px;
+    color: #0c0c0c;
+  }
+  .sidebar .nav-links li a .links_name{
+    color: #0d0d0d;
+    padding-top: 50px;
+    font-size: 15px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  .sidebar .nav-links .log_out{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .home-section{
+    position: relative;
+    background: #191919;
+    min-height: 100vh;
+    width: calc(100% - 240px);
+    left: 240px;
+    transition: all 0.4s ease-in-out;
+  }
+  .sidebar.active ~ .home-section{
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+.profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  

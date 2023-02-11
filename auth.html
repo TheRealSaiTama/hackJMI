@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Authenticate</title>
+  <link rel="stylesheet" type="text/css" href="css/auth.css">
+</head> 
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="btn">
+        <button class="loginBtn" onclick="document.getElementById('login').style.display = 'block';document.getElementById('signUp').style.display = 'none';">LOG IN</button>
+        <button class="signUpBtn" onclick="document.getElementById('login').style.display = 'none';document.getElementById('signUp').style.display = 'block';">SIGN UP</button>
+      </div>
+      <form class="signUp" id="signUp">
+        <div class="formGroup">
+          <input type="text" id="userName" name="firstname" placeholder="First Name" autocomplete="off">
+        </div>
+
+        <div class="formGroup">
+            <input type="text" id="userName" name="lastname" placeholder="Last Name" autocomplete="off">
+          </div>
+        <div class="formGroup">
+          <input type="email" placeholder="Email ID" name="email" required autocomplete="off">
+        </div>
+        <div class="formGroup">
+          <input type="password" id="password" placeholder="Password" name="password" required autocomplete="off">
+        </div>
+        <div class="formGroup">
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="off">
+        </div>
+        <div class="checkBox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <span class="text">I agree with term and conditions</span>
+        </div>
+        <div class="formGroup">
+          <button type="submit" class="btn2">SIGNUP</button>
+        </div>
+        <div id="error"></div>
+      </form>
+        
+      <!------ Login Form -------- -->
+      <form class="login" id="login">
+        
+        <div class="formGroup">
+          <input type="email" placeholder="Email ID" name="email" required autocomplete="off">
+        </div>
+        <div class="formGroup">
+          <input type="password" id="password" placeholder="Password" name="password" required autocomplete="off">
+         
+        </div>
+        <div class="checkBox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <span class="text">Keep me signed in on this device</span>
+        </div>
+        <div class="formGroup">
+          <button type="submit" class="btn2" onclick="window.location.href='/dashboard/index.html'">LOGIN</button>
+        </div>
+ 
+      </form>
+ 
+    </div>
+  </div>
+  <script src="js/auth.js"> </script>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</body>
+ 
+</html>
